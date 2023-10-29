@@ -83,6 +83,7 @@ const ListaUsuarios = () => {
       });
       setPhone(respuesta.data.phone);
 
+      // eslint-disable-next-line prettier/prettier
       const respuesta2 = await Axios.get(`/usuarios/listarUsuariosConMensajes/${phone}`, {
           headers: {autorizacion: token},
       });
@@ -92,7 +93,8 @@ const ListaUsuarios = () => {
       });
       setUsuarios(usuariosActivos);
     } catch (error) {
-      console.error(error);
+      // Verificar error de Axios
+      // console.error(error);
     }
   };
 

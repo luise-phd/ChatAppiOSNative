@@ -8,8 +8,28 @@ import {useRoute} from '@react-navigation/native';
 import ListaUsuarios from '../components/ListaUsuarios';
 import Footer from '../components/Footer';
 
+import BackgroundFetch from '../services/backgroundTask';
+
+import {request, PERMISSIONS} from 'react-native-permissions';
+
+// const requestLocationPermission = async () => {
+//   const status = await request(PERMISSIONS.IOS.LOCATION_ALWAYS);
+//   if (status === 'granted') {
+//     // Permiso otorgado, puedes iniciar tareas en segundo plano que requieran acceso a la ubicación.
+//     console.error('hola');
+//   } else {
+//     console.error('no hay permiso');
+//   }
+// };
+
 export default function VerUsuarios() {
   const navigation = useNavigation();
+
+  // requestLocationPermission();
+
+  // backgroundTask.schedule({
+  //   period: 900, // Intervalo de ejecución en segundos
+  // });
 
   // const [phone, setPhone] = useState('');
   // const route = useRoute();
